@@ -31,9 +31,7 @@ function newCat(req, res) {
 }
 
 function create(req, res) {
-    // The model is responsible for creating data
     Cat.create(req.body);
-    // Do a redirect anytime data is changed
     res.redirect('/cats');
 }
 
