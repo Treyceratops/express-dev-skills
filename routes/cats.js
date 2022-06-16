@@ -6,11 +6,15 @@ var catsCtrl = require('../controllers/cats');
 
 // All actual paths start with "/cats"
 
-// GET /todos
+// GET /cats
 router.get('/', catsCtrl.index);
-// GET /todos
-router.get('/', catsCtrl.index);
-// GET /todos/:id
+// GET /cats/new
+router.get('/new', catsCtrl.new);
+// GET /cats/:id
 router.get('/:id', catsCtrl.show);
+// create route
+router.post('/', catsCtrl.create)
+// delete route
+router.delete('/:id', catsCtrl.delete);
 
 module.exports = router;

@@ -18,12 +18,16 @@
                 <a href="/cats/<%= c.id %>">
                     <%= c.cat %>
                 </a>
-                <%= c.cat %>
-                    -
-                    <%= c.cute ? 'cute' : 'not cute' %>
+                -
+                <%= c.cute ? 'cute' : 'not cute' %>
+                    <form action="/cats/<%= c.id %>?_method=DELETE" class="delete-form" method="POST">
+                        <button type="submit">X</button>
+                    </form>
             </li>
             <% }); %>
     </ul>
+    <a href="/cats/new">Add Cat</a>
+    <a href="/">Homepage</a>
 </body>
 
 </html>
